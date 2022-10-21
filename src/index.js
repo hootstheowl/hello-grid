@@ -1,3 +1,4 @@
+import "./style.scss";
 import buildGridComponent from "./grid";
 
 export const Grid = buildGridComponent("hello-grid");

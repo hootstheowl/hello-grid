@@ -81,7 +81,7 @@
     }
 
     &.border {
-        border: var(--hello-grid-var-border, 0);
+        border: var(--hello-grid-var-border, 1px solid gray);
     }
 
     &.collapsible {

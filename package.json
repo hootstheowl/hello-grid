@@ -14,6 +14,7 @@
   "devDependencies": {
     "@parcel/compressor-gzip": "^2.7.0",
     "@parcel/config-default": "^2.7.0",
+    "@parcel/transformer-sass": "^2.7.0",
     "parcel": "^2.7.0"
   }
 }

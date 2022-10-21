@@ -1,0 +1,106 @@
+.hello-grid {
+  flex-direction: column;
+  flex-basis: auto;
+}
+
+.hello-grid-row {
+  min-height: 0;
+  flex-direction: row;
+  flex-basis: auto;
+}
+
+.hello-grid-column {
+  flex-direction: column;
+  flex-basis: 0;
+  margin: 0;
+}
+
+.hello-grid-column > .Column {
+  display: block;
+}
+
+.hello-grid, .hello-grid-row, .hello-grid-column {
+  max-width: 100%;
+  outline: none;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+}
+
+.hello-grid.centered, .hello-grid-row.centered, .hello-grid-column.centered {
+  justify-content: center;
+  align-items: center;
+}
+
+.hello-grid.centered.vertical, .hello-grid.centered.horizonal, .hello-grid-row.centered.vertical, .hello-grid-row.centered.horizonal, .hello-grid-column.centered.vertical, .hello-grid-column.centered.horizonal {
+  align-items: initial;
+  justify-content: initial;
+}
+
+.hello-grid.centered.vertical, .hello-grid-row.centered.vertical, .hello-grid-column.centered.vertical {
+  justify-content: center;
+}
+
+.hello-grid.padded, .hello-grid-row.padded, .hello-grid-column.padded {
+  padding: var(--hello-grid-var-padding, 10px);
+}
+
+.hello-grid.padded.padded-left, .hello-grid.padded.padded-right, .hello-grid.padded.padded-top, .hello-grid.padded.padded-bottom, .hello-grid-row.padded.padded-left, .hello-grid-row.padded.padded-right, .hello-grid-row.padded.padded-top, .hello-grid-row.padded.padded-bottom, .hello-grid-column.padded.padded-left, .hello-grid-column.padded.padded-right, .hello-grid-column.padded.padded-top, .hello-grid-column.padded.padded-bottom {
+  padding: 0;
+}
+
+.hello-grid.padded.padded-left, .hello-grid-row.padded.padded-left, .hello-grid-column.padded.padded-left {
+  padding-left: var(--hello-grid-var-padding, 10px);
+}
+
+.hello-grid.padded.padded-right, .hello-grid-row.padded.padded-right, .hello-grid-column.padded.padded-right {
+  padding-right: var(--hello-grid-var-padding, 10px);
+}
+
+.hello-grid.padded.padded-top, .hello-grid-row.padded.padded-top, .hello-grid-column.padded.padded-top {
+  padding-top: var(--hello-grid-var-padding, 10px);
+}
+
+.hello-grid.padded.padded-bottom, .hello-grid-row.padded.padded-bottom, .hello-grid-column.padded.padded-bottom {
+  padding-bottom: var(--hello-grid-var-padding, 10px);
+}
+
+.hello-grid.margin, .hello-grid-row.margin, .hello-grid-column.margin {
+  margin: var(--hello-grid-var-margin, 10px);
+}
+
+.hello-grid.margin.margin-left, .hello-grid.margin.margin-right, .hello-grid.margin.margin-top, .hello-grid.margin.margin-bottom, .hello-grid-row.margin.margin-left, .hello-grid-row.margin.margin-right, .hello-grid-row.margin.margin-top, .hello-grid-row.margin.margin-bottom, .hello-grid-column.margin.margin-left, .hello-grid-column.margin.margin-right, .hello-grid-column.margin.margin-top, .hello-grid-column.margin.margin-bottom {
+  margin: 0;
+}
+
+.hello-grid.margin.margin-left, .hello-grid-row.margin.margin-left, .hello-grid-column.margin.margin-left {
+  margin-left: var(--hello-grid-var-margin, 10px);
+}
+
+.hello-grid.margin.margin-right, .hello-grid-row.margin.margin-right, .hello-grid-column.margin.margin-right {
+  margin-right: var(--hello-grid-var-margin, 10px);
+}
+
+.hello-grid.margin.margin-top, .hello-grid-row.margin.margin-top, .hello-grid-column.margin.margin-top {
+  margin-top: var(--hello-grid-var-margin, 10px);
+}
+
+.hello-grid.margin.margin-bottom, .hello-grid-row.margin.margin-bottom, .hello-grid-column.margin.margin-bottom {
+  margin-bottom: var(--hello-grid-var-margin, 10px);
+}
+
+.hello-grid.border, .hello-grid-row.border, .hello-grid-column.border {
+  border: var(--hello-grid-var-border, 1px solid gray);
+}
+
+.hello-grid.collapsible, .hello-grid-row.collapsible, .hello-grid-column.collapsible {
+  transition: all .5s;
+  overflow: hidden;
+}
+
+.hello-grid.collapsible.collapsed, .hello-grid-row.collapsible.collapsed, .hello-grid-column.collapsible.collapsed {
+  padding: 0;
+  flex: 0 !important;
+}
+
+/*# sourceMappingURL=main.css.map */

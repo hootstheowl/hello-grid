@@ -1,3 +1,4 @@
+require("./main.css");
 var $gXNCa$reactjsxruntime = require("react/jsx-runtime");
 var $gXNCa$classnames = require("classnames");
 
@@ -11,6 +12,7 @@ function $parcel$interopDefault(a) {
 $parcel$export(module.exports, "Grid", () => $4fa36e821943b400$export$ef2184bd89960b14);
 $parcel$export(module.exports, "Row", () => $4fa36e821943b400$export$b59bdbef9ce70de2);
 $parcel$export(module.exports, "Column", () => $4fa36e821943b400$export$816b5d811295e6bc);
+
 
 
 function $43e04fb5e2b45844$var$getClassNamesForBorders(borderType, value) {
