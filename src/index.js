@@ -1,4 +1,4 @@
-import "./style.scss";
+import "bundle-text:./style.scss";
 import buildGridComponent from "./grid";
 
 export const Grid = buildGridComponent("hello-grid");

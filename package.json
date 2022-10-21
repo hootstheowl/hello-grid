@@ -4,6 +4,11 @@
   "author": "Shawn Scofield",
   "source": "src/index.js",
   "main": "dist/main.js",
+  "targets": {
+    "main": {
+      "optimize": true
+    }
+  },
   "scripts": {
     "build": "parcel build"
   },
@@ -14,6 +19,7 @@
   "devDependencies": {
     "@parcel/compressor-gzip": "^2.7.0",
     "@parcel/config-default": "^2.7.0",
+    "@parcel/transformer-inline-string": "^2.7.0",
     "@parcel/transformer-sass": "^2.7.0",
     "parcel": "^2.7.0"
   }
