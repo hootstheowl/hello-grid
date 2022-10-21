@@ -1,0 +1,96 @@
+.hello-grid {
+    flex-direction: column;
+    flex-basis: auto;
+}
+
+.hello-grid-row {
+    min-height: 0;
+    flex-direction: row;
+    flex-basis: auto;
+}
+
+.hello-grid-column {
+    margin: 0;
+    flex-direction: column;
+    flex-basis: 0;
+
+    > .Column {
+        display: block;
+    }
+}
+
+.hello-grid, .hello-grid-row, .hello-grid-column {
+    max-width: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    outline: none;
+
+    &.centered {
+        align-items: center;
+        justify-content: center;
+
+        &.vertical, &.horizonal {
+            align-items: initial;
+            justify-content: initial;
+        }
+
+        &.vertical {
+            justify-content: center;
+        }
+    }
+
+    &.padded {
+        padding: var(--hello-grid-var-padding, 10px);
+
+        &.padded-left, &.padded-right, &.padded-top, &.padded-bottom {
+            padding: 0px;
+        }
+        &.padded-left {
+            padding-left: var(--hello-grid-var-padding, 10px);
+        }
+        &.padded-right {
+            padding-right: var(--hello-grid-var-padding, 10px);
+        }
+        &.padded-top {
+            padding-top: var(--hello-grid-var-padding, 10px);
+        }
+        &.padded-bottom {
+            padding-bottom: var(--hello-grid-var-padding, 10px);
+        }
+    }
+
+    &.margin {
+        margin: var(--hello-grid-var-margin, 10px);
+
+        &.margin-left, &.margin-right, &.margin-top, &.margin-bottom {
+            margin: 0px;
+        }
+        &.margin-left {
+            margin-left: var(--hello-grid-var-margin, 10px);
+        }
+        &.margin-right {
+            margin-right: var(--hello-grid-var-margin, 10px);
+        }
+        &.margin-top {
+            margin-top: var(--hello-grid-var-margin, 10px);
+        }
+        &.margin-bottom {
+            margin-bottom: var(--hello-grid-var-margin, 10px);
+        }
+    }
+
+    &.border {
+        border: var(--hello-grid-var-border, 0);
+    }
+
+    &.collapsible {
+        overflow: hidden;
+        transition: all 500ms;
+
+        &.collapsed {
+            flex: 0 !important;
+            padding: 0;
+        }
+    }
+}
