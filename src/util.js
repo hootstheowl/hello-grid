@@ -62,15 +62,10 @@ export function buildGridComponent(componentClassName) {
 /**
  * Injects given stringified stylesheet into document head
  * @param {string} stylesheet
- * @returns {void}
+ * @returns {undefined}
  */
-export function injectStyle(stylesheet) {
+export function injectStylesheet(stylesheet) {
     const styleElement = document.createElement("style");
     styleElement.textContent = stylesheet;
-    document.addEventListener("load", () => {
-        const headElement = document.head;
-        if (headElement === document.querySelector("head")) {
-            headElement.appendChild(styleElement);
-        }
-    });
+    document.querySelector("head").appendChild(styleElement);
 };
