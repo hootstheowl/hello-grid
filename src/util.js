@@ -30,30 +30,31 @@ export function buildGridComponent(componentClassName) {
 	const GridComponent = ({
 		className,
 		style,
-		layout,
 		centered,
 		padded,
 		margin,
-		border,
+		bordered,
 		collapsible,
 		collapsed,
 		flex,
+        height,
     	...props
 	}) => (
 		<div
 			{...props}
 			className={classNames(
 				componentClassName,
+                { bordered: !!bordered },
+                ...getClassNamesForBorderType("bordered", bordered),
 				{ padded: !!padded },
 				...getClassNamesForBorderType("padded", padded),
 				{ margin: !!margin },
 				...getClassNamesForBorderType("margin", margin),
 				{ centered: !!centered }, centered,
-				{ collapsible, collapsed, layout: !!layout }, layout,
-				{ border: !!border },
+				{ collapsible, collapsed },
 				className,
 			)}
-			style={{flex, ...style}}
+			style={{flex, height, maxHeight: height, ...style}}
 		/>
 	);
 	return GridComponent;

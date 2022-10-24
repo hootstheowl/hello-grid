@@ -1,3 +1,33 @@
+/* sass default variables*/
+$var-default-margin: 10px;
+$var-default-padding: 10px;
+$var-default-border: 1px solid gray;
+$var-default-border-radius: 0px;
+$var-default-collapsible-transition: all 500ms;
+
+/* sass reused variables */
+$var-padding-value: var(
+    --hello-grid-var-padding,
+    $var-default-padding
+);
+$var-margin-value: var(
+    --hello-grid-var-margin,
+    $var-default-margin
+);
+$var-border-value: var(
+    --hello-grid-var-border,
+    $var-default-border
+);
+$var-border-radius-value: var(
+    --hello-grid-var-border-radius,
+    $var-default-border-radius
+);
+$var-collapsible-transition-value: var(
+    --hello-grid-var-collapsible-transition,
+    $var-default-collapsible-transition
+);
+
+/* hello-grid components individual styles */
 .hello-grid {
     flex-direction: column;
     flex-basis: auto;
@@ -7,6 +37,18 @@
     min-height: 0;
     flex-direction: row;
     flex-basis: auto;
+
+    &.collapsible {
+        max-height: 100vh;
+
+        & > .hello-grid, .hello-grid-column {
+            overflow: hidden;
+        }
+
+        &.collapsed {
+            max-height: 0 !important;
+        }
+    }
 }
 
 .hello-grid-column {
@@ -14,11 +56,18 @@
     flex-direction: column;
     flex-basis: 0;
 
-    > .Column {
-        display: block;
+    &.collapsible {
+        & > .hello-grid, .hello-grid-row {
+            overflow: hidden;
+        }
+
+        &.collapsed {
+            flex: 0 !important;
+        }
     }
 }
 
+/* hello-grid components shared styles */
 .hello-grid, .hello-grid-row, .hello-grid-column {
     max-width: 100%;
     display: flex;
@@ -41,52 +90,69 @@
     }
 
     &.padded {
-        padding: var(--hello-grid-var-padding, 10px);
+        padding: $var-padding-value;
 
         &.padded-left, &.padded-right, &.padded-top, &.padded-bottom {
-            padding: 0px;
+            padding: 0;
         }
         &.padded-left {
-            padding-left: var(--hello-grid-var-padding, 10px);
+            padding-left: $var-padding-value;
         }
         &.padded-right {
-            padding-right: var(--hello-grid-var-padding, 10px);
+            padding-right: $var-padding-value;
         }
         &.padded-top {
-            padding-top: var(--hello-grid-var-padding, 10px);
+            padding-top: $var-padding-value;
         }
         &.padded-bottom {
-            padding-bottom: var(--hello-grid-var-padding, 10px);
+            padding-bottom: $var-padding-value;
         }
     }
 
     &.margin {
-        margin: var(--hello-grid-var-margin, 10px);
+        margin: $var-margin-value;
 
         &.margin-left, &.margin-right, &.margin-top, &.margin-bottom {
-            margin: 0px;
+            margin: 0;
         }
         &.margin-left {
-            margin-left: var(--hello-grid-var-margin, 10px);
+            margin-left: $var-margin-value;
         }
         &.margin-right {
-            margin-right: var(--hello-grid-var-margin, 10px);
+            margin-right: $var-margin-value;
         }
         &.margin-top {
-            margin-top: var(--hello-grid-var-margin, 10px);
+            margin-top: $var-margin-value;
         }
         &.margin-bottom {
-            margin-bottom: var(--hello-grid-var-margin, 10px);
+            margin-bottom: $var-margin-value;
         }
     }
 
-    &.border {
-        border: var(--hello-grid-var-border, 1px solid gray);
+    &.bordered {
+        border: $var-border-value;
+        border-radius: $var-border-radius-value;
+
+        &.bordered-left, &.bordered-right, &.bordered-top, &.bordered-bottom {
+            border: 0;
+        }
+        &.bordered-left {
+            border-left: $var-border-value;
+        }
+        &.bordered-right {
+            border-right: $var-border-value;
+        }
+        &.bordered-top {
+            border-top: $var-border-value;
+        }
+        &.bordered-bottom {
+            border-bottom: $var-border-value;
+        }
     }
 
     &.collapsible {
         overflow: hidden;
-        transition: all 500ms;
+        transition: $var-collapsible-transition-value;
 
         &.collapsed {
             flex: 0 !important;
