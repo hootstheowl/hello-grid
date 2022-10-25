@@ -7,18 +7,18 @@ import classNames from "classnames";
  * @returns {Array}
  */
 const getClassNamesForStyleType = (styleType, value) => {
-	if (!!value === false) {
-		return [null];
-	}
-	if(Array.isArray(value) === true) {
-		if(value.length > 0 === true) {
-			return value.map(direction => `${styleType}-${direction}`);
-		}
-	}
-	if (typeof value === "string") {
-		return [`${styleType}-${value}`]
-	}
-	return [null];
+  if (!!value === false) {
+    return [null];
+  }
+  if(Array.isArray(value) === true) {
+    if(value.length > 0 === true) {
+      return value.map(direction => `${styleType}-${direction}`);
+    }
+  }
+  if (typeof value === "string") {
+    return [`${styleType}-${value}`];
+  }
+  return [null];
 }
 
 /**
@@ -40,9 +40,9 @@ export const buildGridComponent = (componentClassName) => (
     height,
     ...props
   }) => (
-		<div
+    <div
       {...props}
-			className={classNames(
+      className={classNames(
         componentClassName,
         {
           bordered: !!bordered,
@@ -56,16 +56,16 @@ export const buildGridComponent = (componentClassName) => (
         getClassNamesForStyleType("bordered", bordered),
         getClassNamesForStyleType("padded", padded),
         getClassNamesForStyleType("margin", margin),
-        className,
-			)}
-			style={{
+        className
+      )}
+      style={{
         flex,
         height,
         maxHeight: height,
         ...style
       }}
-		/>
-	)
+    />
+  )
 );
 
 /**
