@@ -9,6 +9,12 @@
       "optimize": true
     }
   },
+  "browserlist": [
+    "> 1%",
+    "last 2 versions",
+    "Firefox ESR", 
+    "not dead"
+  ],
   "scripts": {
     "build": "parcel build"
   },
