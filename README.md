@@ -73,3 +73,56 @@ const MyGrid = () => (
 ```
 Can create a more visible, spaced out, and arranged blueprint to work from:
 ![basic props screenshot](basic-props-screenshot.png)
+
+## Props list
+#### margin (boolean, string, array)
+```javascript
+margin | margin={true}
+  // boolean. margin will be placed around the entire component
+
+margin="top" | margin="bottom" | margin="left" | margin="right"
+  // string. margin will only be placed on specified area
+
+margin={["top", "bottom", "left", "right"]}
+  // array. margin will be placed on all specified areas
+```
+#### padded (boolean, string, array)
+```javascript
+padded | padded={true}
+  // boolean. padding will be placed within the entire component
+
+padded="top" | padded="bottom" | padded="left" | padded="right"
+  // string. padding will only be placed within specified area
+
+padded={["top", "bottom", "left", "right"]}
+  // array. padding will be placed within all specified areas
+```
+#### bordered (boolean, string, array)
+```javascript
+bordered | bordered={true}
+  // boolean. border will be placed over the entire component
+
+bordered="top" | bordered="bottom" | bordered="left" | bordered="right"
+  // string. border will only be placed over specified area
+
+bordered={["top", "bottom", "left", "right"]}
+  // array. border will be placed over all specified areas
+```
+#### centered (boolean, string)
+```javascript
+centered | centered={true}
+  // boolean. content within component will be centered both horizontal and vertical
+
+centered="horizontal" | centered="vertical" 
+  // string. content within component will be centered as specified
+```
+#### flex (string)
+`flex` acts as a shortcut to the `flex` CSS shorthand property. This is useful for defining your own ratios within Rows and Columns when you do not want them to be equally distributed. All other valid usage for `flex` can be found [in the official mdn documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/flex).
+
+## Fun / Experimental Props
+
+#### collapsible (boolean)
+When `collapsible` is used, it identifies that the `Column` or `Row` can be collapsed. Currently, `Column` collapses horizontally and `Row` collapses vertically.
+
+#### collapsed (boolean)
+When `true`, `collapsed` will collapse a `collapsible` grid component. If your grid component is already collapsed, toggling the `collapsed` prop will return the component to it's previous state.
