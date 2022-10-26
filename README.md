@@ -44,7 +44,7 @@ const MyGrid = () => (
 ```
 
 This should give you a result that looks extremely bare-bones, only using the flexbox styles to acheive what would look like this:
-![basic screenshot](basic-screenshot.png)
+![basic screenshot](basic-screenshot.gif)
 
 ## Using Props
 The same example above, when slightly altered using provided props like so:
@@ -72,7 +72,7 @@ const MyGrid = () => (
 );
 ```
 Can create a more visible, spaced out, and arranged blueprint to work from:
-![basic props screenshot](basic-props-screenshot.png)
+![basic props screenshot](basic-props-screenshot.gif)
 
 ## Props list
 #### margin (boolean, string, array)
