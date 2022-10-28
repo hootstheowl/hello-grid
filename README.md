@@ -47,7 +47,7 @@ This should give you a result that looks extremely bare-bones, only using the fl
 ![basic screenshot](static/basic-screenshot.gif)
 
 ## Using Props
-The same example above, when slightly altered using provided props like so:
+Using the same example above, the layout can be significantly changed using the included formatting props.
 
 ```javascript
 const MyGrid = () => (
@@ -71,7 +71,7 @@ const MyGrid = () => (
   </Grid>
 );
 ```
-Can create a more visible, spaced out, and arranged blueprint to work from:
+This can create a more visible, spaced out, and arranged blueprint to work from:
 ![basic props screenshot](static/basic-props-screenshot.gif)
 
 ## Props list
@@ -145,3 +145,7 @@ To customize the default values for the `padded`, `margin`, `bordered`, and `col
     /* default all 500ms */
 }
 ```
+
+## [Code Sandbox](https://codesandbox.io/s/hello-grid-basic-react-example-441lgl)
+
+Finally, if you'd like to test out *Hello, Grid!* a [code sandbox](https://codesandbox.io/s/hello-grid-basic-react-example-441lgl) has been created that utilizes all features of the library and can be freely used, edited, and forked for testing or as a template project.
