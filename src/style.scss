@@ -74,6 +74,7 @@ $var-collapsible-transition-value: var(
   flex-grow: 1;
   flex-shrink: 1;
   outline: none;
+  overflow: auto;
 
   &.centered {
     align-items: center;
@@ -151,11 +152,10 @@ $var-collapsible-transition-value: var(
   }
 
   &.collapsible {
-    overflow: hidden;
+    overflow: auto;
     transition: $var-collapsible-transition-value;
 
     &.collapsed {
-      flex: 0 !important;
       padding: 0;
     }
   }
