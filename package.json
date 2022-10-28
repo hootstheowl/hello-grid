@@ -1,11 +1,19 @@
 {
   "name": "hello-grid",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "author": "Shawn Scofield",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hootstheowl/hello-grid.git"
   },
+  "keywords": [
+    "grid",
+    "flexbox",
+    "jsx",
+    "minimalist",
+    "small",
+    "hello-grid"
+  ],
   "source": "src/index.js",
   "main": "dist/main.js",
   "targets": {
